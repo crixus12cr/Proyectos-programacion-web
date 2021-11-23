@@ -1,0 +1,155 @@
+body {
+    margin: 0 px;
+    font-family: sans-serif;
+}
+
+
+/* cabezote */
+
+header {
+    background-color: yellow;
+    font-family: sans-serif;
+    padding: 0 px;
+    margin: 0 px;
+    grid-column: 1 / -1;
+}
+
+header h1 {
+    margin: 0 px;
+    padding: 10 px;
+    font-size: 250%;
+    text-align: middle;
+}
+
+
+/* menu horizontal */
+
+.menu_hor {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+}
+
+.menu_hor li {
+    float: left;
+    border-right: 1px solid yellow;
+}
+
+.menu_hor li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12 px 14 px;
+    text-decoration: none;
+}
+
+.menu_hor li:last-child {
+    border-right: none;
+}
+
+
+/* maquetacion productos y banners */
+
+section {
+    width: 73%;
+    float: left;
+    margin-left: 10 px;
+}
+
+aside {
+    width: 23%;
+    float: left;
+    margin-top: 4px;
+}
+
+aside img {
+    margin-left: 10px;
+}
+
+article {
+    clear: both;
+    /* border-bottom: dashed gray 1 px; */
+}
+
+article img {
+    float: left;
+    width: 100 px;
+    height: 100 px;
+    margin-right: 10 px;
+}
+
+
+/* pie de pagina */
+
+footer {
+    clear: both;
+    background-color: yellow;
+    margin: 0 px;
+    padding: 5 px;
+    border-top: 2px solid black;
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        grid-column: 1 / -1;
+    }
+    section article h3 {
+        text-align: center;
+        width: 100%;
+    }
+    section article p {
+        text-align: center;
+        width: 100%;
+    }
+    section article img {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+    }
+    header {
+        text-align: center;
+        width: 100%;
+    }
+    footer {
+        grid-column: col-start / -1;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 800px) {
+    section {
+        grid-column: col-start / span 1;
+    }
+    section article img {
+        width: 100%;
+        height: auto;
+    }
+    aside {
+        grid-column: col-start 3;
+    }
+    footer {
+        grid-column: col-start / -1;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    section article img {
+        grid-column: col-start;
+    }
+    section article h3 {
+        grid-column: col-start 2;
+        width: 100%;
+    }
+    section article p {
+        grid-column: col-start 2;
+        width: 100%;
+    }
+    aside {
+        grid-column: col-start 3;
+    }
+    footer {
+        grid-column: col-start / -1;
+    }
+}
